@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaay! 💕</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="yes.css">
+</head>
+<body>
+  <div class="background">
+    <div class="hearts-bg" id="heartsBg"></div>
+    <div class="main-container">
+
+      <div class="photo-container">
+        <img src="yes.jpg" alt="Couple Photo" class="photo">
+        <div class="photo-overlay"></div>
+      </div>
+
+      <div class="text-container">
+        <h1 class="question">I Knew You'd Say Yes! 💕</h1>
+        <p class="subtext">You just made me the happiest person alive ✨</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Spawn floating hearts across the background
+    const container = document.getElementById('heartsBg');
+    const emojis = ['💕', '💖', '🌸', '💗', '✨', '💝'];
+
+    function spawnHeart() {
+      const el = document.createElement('span');
+      el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      el.style.cssText = `
+        position: absolute;
+        left: ${Math.random() * 100}%;
+        bottom: -40px;
+        font-size: ${1 + Math.random() * 1.5}rem;
+        opacity: 0.8;
+        animation: floatUp ${4 + Math.random() * 4}s ease-in forwards;
+        pointer-events: none;
+      `;
+      container.appendChild(el);
+      setTimeout(() => el.remove(), 8000);
+    }
+
+    setInterval(spawnHeart, 350);
+  </script>
+</body>
+</html>

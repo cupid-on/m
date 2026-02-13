@@ -1,0 +1,64 @@
+/* ── Yes page extras ── */
+
+.hearts-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.main-container {
+  z-index: 1;
+  position: relative;
+}
+
+.subtext {
+  font-family: 'Beautiful Comethrue', sans-serif;
+  font-size: 1.4rem;
+  color: #fff0f0;
+  text-shadow: 1px 1px 3px rgba(116, 116, 116, 0.4);
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-top: 10px;
+  animation: fadeInUp 1s ease 0.4s both;
+}
+
+.question {
+  animation: fadeInUp 0.8s ease both;
+  text-align: center;
+}
+
+.photo {
+  animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .subtext {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+}

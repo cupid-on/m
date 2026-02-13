@@ -1,0 +1,382 @@
+@import url('https://fonts.cdnfonts.com/css/beautiful-comethrue');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Beautiful Comethrue', sans-serif;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.photo {
+    height: 390px;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 25px;
+}
+
+
+
+/* From Uiverse.io by Madflows */
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+button {
+    font-weight: 600;
+    color: #382b22;
+    text-transform: uppercase;
+    padding: 1.25em 2.3em;
+    background: #fff0f0;
+    border: 2px solid #b18597;
+    border-radius: 0.75em;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f9c4d2;
+    border-radius: inherit;
+    -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+    box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+    -webkit-transform: translate3d(0, 0.75em, -1em);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button:hover {
+    background: #ffe9e9;
+    -webkit-transform: translate(0, 0.25em);
+    transform: translate(0, 0.25em);
+}
+
+button:hover::before {
+    -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+    box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+    -webkit-transform: translate3d(0, 0.5em, -1em);
+    transform: translate3d(0, 0.5em, -1em);
+}
+
+button:active {
+    background: #ffe9e9;
+    -webkit-transform: translate(0em, 0.75em);
+    transform: translate(0em, 0.75em);
+}
+
+button:active::before {
+    -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    -webkit-transform: translate3d(0, 0, -1em);
+    transform: translate3d(0, 0, -1em);
+}
+
+
+.question {
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    color: #fff0f0;
+    -webkit-text-stroke: 0.1px #ffffff;
+    text-shadow: 1px 1px 3px rgba(116, 116, 116, 0.5);
+}
+
+.btn {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    z-index: 9999;
+}
+
+
+
+/* background */
+
+.background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+            #92b5ed,
+            #d08bf0);
+    /* Gradient background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow for depth */
+    border-radius: 10px;
+    /* Rounded corners */
+    position: relative;
+    overflow: hidden;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: 0;
+    /* Allow clicking through the pattern layer */
+}
+
+
+.photo-container {
+    z-index: 9999;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .question {
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .photo {
+        height: 280px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 1em 1.8em;
+    }
+
+    .btn {
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+    }
+
+    .buttons-container {
+        gap: 15px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .question {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    .photo {
+        height: 220px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 0.9em 1.5em;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+
+    .buttons-container {
+        gap: 12px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    button {
+        width: 80%;
+        max-width: 250px;
+    }
+
+    .buttons-container {
+        margin-top: 15px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .question {
+        font-size: 1.2rem;
+    }
+
+    .photo {
+        height: 180px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 0.8em 1.3em;
+        margin-top: 15px;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+    }
+
+    .buttons-container {
+        margin-top: 15px;
+        gap: 20px;
+    }
+
+}
+
+/* Landscape mobile optimization */
+@media (max-height: 600px) and (orientation: landscape) {
+    .main-container {
+        height: auto;
+        padding: 20px 0;
+        min-height: 100vh;
+    }
+
+    .photo {
+        height: 200px;
+    }
+
+    .question {
+        font-size: 1.5rem;
+        margin: 15px 0;
+    }
+
+    .buttons-container {
+        margin-top: 15px;
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+/* Enhanced photo styling */
+.photo-container {
+    position: relative;
+    z-index: 9999;
+    margin-bottom: 30px;
+}
+
+.photo {
+    border-radius: 20px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        0 0 0 8px rgba(255, 255, 255, 0.2),
+        0 0 0 12px rgba(255, 182, 193, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    border: 4px solid #fff;
+}
+
+.photo:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 8px rgba(255, 255, 255, 0.3),
+        0 0 0 12px rgba(255, 182, 193, 0.5),
+        0 0 20px rgba(255, 182, 193, 0.6);
+}
+
+/* Decorative hearts around photo */
+.photo-container::before,
+.photo-container::after {
+    content: "💕";
+    position: absolute;
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+.photo-container::before {
+    top: -15px;
+    left: -15px;
+    animation-delay: 0s;
+}
+
+.photo-container::after {
+    bottom: -15px;
+    right: -15px;
+    animation-delay: 1.5s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Optional: Add sparkle effect */
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    background-size: 200% 200%;
+    animation: shimmer 3s infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -100% -100%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.yes-button,
+.no-button {
+    transition: transform 0.3s ease;
+}
