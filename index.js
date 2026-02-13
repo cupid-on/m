@@ -27,7 +27,7 @@ noButton.addEventListener('click', function () {
 yesButton.addEventListener('click', function () {
   createHearts();
   setTimeout(() => {
-    window.location.href = 'yes.html';
+    window.location.href = 'Yes.html';
   }, 1000);
 });
 
